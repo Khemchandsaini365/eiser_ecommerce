@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Roboto",sans-serif;
-
+    width: 100%;
 }
 .main{
     background-color: #f6f6f6;
@@ -15,6 +15,7 @@ body{
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
+    padding-top: 20px;
     /* height: 25px; */
     height: 5vh;
 }
@@ -31,9 +32,14 @@ body{
     .main{
         display: none;
     }
-    
 }
+
+.menu{
+    display: none;
+}
+
 .header{
+
     background-color: #fff;
     height: 10vh; 
     width: 100%;
@@ -41,11 +47,9 @@ body{
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-
 }
 #logo{
     width: 25%;
-    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +78,7 @@ body{
     text-decoration: none;
     color: #797979;
 }
-.items{
+ #header .items{
     margin: 0 10%;
 }
 #icons{
@@ -87,6 +91,21 @@ body{
     color: #797979;
 
 }
+@media (max-width:800px){
+    .header{
+        padding: 30px 50px 30px 30px;
+    }
+    .menu{
+        display: block;
+        font-size: 30px;
+        text-align: right;
+        color: blue;
+    }
+    #main_links,#icons{
+        display: none;
+    }
+    
+} 
 /* Bannner */
 .banner{
     background: url("./images/banner-bg.jpg");
@@ -138,13 +157,65 @@ body{
 }
 /* features */
 .feature{
-    width: 100%;
-    background-color: aquamarine;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 60px 60px 100px 60px;
+
+}
+.feature>.items>h3,p{
+    margin-bottom: 20px;
+}
+.feature .items i{
+    font-size: 30px;
+    margin-bottom: 30px;
 }
 .feature .items{
-    border: 1px solid #797979;
-    /* width: 100px; */
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #79797944;
+    text-align: center;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width:950px) {
+    .feature{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    padding: 60px 160px 100px 160px;
+
+    }  
+}
+@media (max-width:850px) {
+    .feature{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        margin:50px 15% 50px 15% ;
+        /* margin-left: 25%; */
+    }  
+}
+.featureHeading{
+width: 100%;
+text-align: center;
+line-height: 2.5;
+}
+.featureHeading>div{
+    padding:0 35%;
+}
+.featureHeading>div>h2{
+    border-bottom:1px solid #79797944;
+}
+
+@media (max-width:600px) {
+    .featureHeading{
+        width: 100%;
+        text-align: center;
+        line-height: 2.5;
+        }
 }
