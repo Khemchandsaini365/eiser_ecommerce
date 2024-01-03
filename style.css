@@ -39,15 +39,19 @@ body{
 }
 
 .header{
-
+    position: sticky;
+    top: 0;
+    z-index: 5;
     background-color: #fff;
-    height: 10vh; 
+    height: 13vh; 
     width: 100%;
     display: flex;
     justify-content: center;
     justify-content: space-between;
     align-items: center;
+    transition: all none 1s;
 }
+
 #logo{
     width: 25%;
     display: flex;
@@ -137,6 +141,7 @@ body{
     color: #fff;
 
 }
+
 .taglines p{
     font-family: "Heebo",sans-serif;
     font-size: 14px;
@@ -153,6 +158,21 @@ body{
     border-radius: 5px;
     border: 5px solid #71cd14;
     color: #fff;
+    margin-top: 20px;
+}
+.taglines button:hover{
+    
+    background-color: #fff;
+    border: 1px solid #71cd14;
+    color: #71cd14;
+
+    transition: all ease-in .3s;
+    width: 50%;
+    padding: 13px;
+    /* background-color: #71cd14; */
+    border-radius: 5px;
+    /* border: 5px solid #71cd14; */
+    /* color: #fff; */
     margin-top: 20px;
 }
 /* features */
@@ -417,7 +437,10 @@ line-height: 2.5;
  
     
  }
-
+ #item-0 h2{
+    border-bottom: 1px solid #f0f2f1;
+    padding-bottom: 5px;
+ }
  #item-1 {
  
     background-color: #f0f2f1; 
@@ -608,3 +631,18 @@ line-height: 2.5;
     color: #71cd14;
     transition: all ease .5s;
  }
+ .footer{
+    height: 80vh;
+    background-color: #0d0d1f;
+    color: #fff;
+    margin-top: 100px;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #4a4a4a;
+}
+@media (max-width:500px) {
+    .footer{
+        flex-direction: column;
+    }   
+}
